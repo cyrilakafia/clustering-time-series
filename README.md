@@ -14,5 +14,6 @@ First I replicate the main results in the paper. Then I generate some random dat
 ----------------------------------- | ----------------------------------- 
 ![output](https://github.com/cyrilakafia/clustering-time-series/assets/79414187/b5407eef-4315-4210-9ac5-7844d623e77a) | ![output_1](https://github.com/cyrilakafia/clustering-time-series/assets/79414187/27ff9e21-6988-40ed-964e-e8c5c470323d) 
 
+# Noteworthy
 
-
+The algorithm works for time series that are in a very specific format in terms of data shape and data type, continuous or discrete. 
