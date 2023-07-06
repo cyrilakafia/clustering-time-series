@@ -1,20 +1,14 @@
 import numpy as np
 from numba import jit
-from utils.data import load_network, load_my_network
+from utils.data import load_network
 from utils.distributions_jit import samp_normal, samp_uniform, normal_logpdf, uniform_logpdf
 from binomial_ssm_csmc import bssm_log_likelihood
 from dirichlet_process import infer_dp
-import pandas as pd
 
 SEED = 1235
 np.random.seed(SEED)
 
-# network_df = load_network()
-network_df = load_my_network()
-
-
-network_df = pd.DataFrame(network_df)
-rounded_df = network_df.round(decimals=1)
+network_df = load_network()
 obs_1ms_df = network_df.apply(lambda x: x.sum(0))
 n_trials_1ms_df = network_df.apply(lambda x: x.shape[0])
 
@@ -51,4 +45,4 @@ def calc_bssm_log_like_cue(ob, param, n):
                                max_iters=3, mean_init=mean_init+jump, var_init=1e-10)
 
 output = infer_dp(obs_all, calc_bssm_log_like_cue, 1.0, samp_base, base_logpdf, n_gibbs_iters=10000, 
-                  sds_mh_proposal=1/2 * np.array([0.5, 0.5]), n_aux=5, dump_file='../pickle/mycue.p', seed=SEED)
+                  sds_mh_proposal=1/2 * np.array([0.5, 0.5]), n_aux=5, dump_file='../pickle/cue.p', seed=SEED)

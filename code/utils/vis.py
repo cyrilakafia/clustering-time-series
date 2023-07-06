@@ -125,6 +125,9 @@ def plot_raster(raster, x_axis=None, ax=None, ms=10, offset=0):
             ax.plot(x_axis[mask], (i+1+offset) * np.ones(mask.sum()), 'k.', markersize=ms)
         else:
             plt.plot(x_axis[mask], (i+1+offset) * np.ones(mask.sum()), 'k.', markersize=ms)
+            
+
+# Unable to run this function on my Windows Computer  - Cyril
 
 # def import_camera_ready_settings(text_font=16, number_font=16):
 #     sns.set_style("whitegrid")

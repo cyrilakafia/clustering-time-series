@@ -8,12 +8,10 @@ def read_pickle(f):
 
 def write_pickle(obj, f):
     pickle.dump(obj, open(f, 'wb'))
-    
-# def load_network():
-#     return read_pickle(data_dir + 'network.p')
 
 def load_network():
     return pd.read_pickle(data_dir + 'network.p')
 
-def load_my_network():
-    return pd.read_pickle(data_dir + 'neural_activity.p')
+# to load my custom dataset - Cyril
+def load_my_network(file):
+    return pd.read_pickle(data_dir + file)

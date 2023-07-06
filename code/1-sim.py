@@ -59,6 +59,11 @@ for _ in range(5):
     
     obs = np.hstack([np.random.binomial(224, p1, size=(100,)), np.random.binomial(225, p2, size=(50, )), np.random.binomial(255, p1, size=(250,))])
     obs_all.append(obs)
+    
+import pickle 
+
+with open('pickle/obs.p', 'wb') as f:
+    pickle.dump(obs_all, f)
 
 # base distribution (G)
 @jit(nopython=True, nogil=True)
