@@ -10,7 +10,7 @@ Using a novel approach DPnSSM to cluster time series data with non-linear dynami
 
 First I replicate the main results in the paper. Then I generate some random data, one with prior knowledge of the existence of cluster(s) and one without (just random). The algorithm is able to cluster and divide the population into sub groups. Results are shown below.
 
- Clusters                            | No sub populations, 1 cluster                
+ 2 Clusters                            | No sub populations, 1 cluster                
 ----------------------------------- | ----------------------------------- 
 ![output](https://github.com/cyrilakafia/clustering-time-series/assets/79414187/b5407eef-4315-4210-9ac5-7844d623e77a) | ![output_1](https://github.com/cyrilakafia/clustering-time-series/assets/79414187/27ff9e21-6988-40ed-964e-e8c5c470323d) 
 
