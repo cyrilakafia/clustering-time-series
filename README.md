@@ -17,6 +17,3 @@ First I replicate the main results in the paper. Then I generate some random dat
 # Noteworthy
 
 The algorithm works for time series that are in a very specific format in terms of data shape and data type, continuous or discrete.
-
-# TODO
-Refactoring the entire code base
